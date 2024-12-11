@@ -470,7 +470,9 @@ for sample in samples:
     surf.set_atomic_numbers(atomic_numbers)
     formula = surf.get_chemical_formula()
 
-    if check: view(surf)
+    if check:
+        view(surf)
+
     data = {"chemical_formula": formula, "atomic_numbers": list(atomic_numbers), "run": nrun + 1}
     #
     # write candidate to file
